@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us - GWFMA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+       
+        <div>
+          <div class="font-bold text-lg">GWFMA</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      <nav id="navLinks" class="hidden flex-col gap-4 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-4 md:bg-transparent md:w-auto">
+        <a href="index.html" class="cta-gold text-center">Home</a>
+        <a href="about.html" class="cta-gold text-center">About</a>
+        <a href="calculator.html" class="cta-gold text-center">Calculator</a>
+        <a href="media.html" class="cta-gold text-center">Media</a>
+        <a href="blog.html" class="cta-gold text-center">Blog</a>
+        <a href="contact.html" class="cta-gold text-center">Contact</a>
+        <a href="register.html" class="cta-gold text-center">Enroll</a>
+        <a href="careers.html" class="cta-gold text-center">Careers</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-black text-white py-16 text-center">
+    <h1 class="text-4xl font-bold">Contact Us</h1>
+    <p class="mt-4 text-gray-300">We’re here to answer your questions and guide you.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+      
+      <!-- Form -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+          <div>
+            <label class="block font-medium mb-2">Full Name</label>
+            <input type="text" name="name" class="w-full p-3 rounded-lg border" required>
+          </div>
+          <div>
+            <label class="block font-medium mb-2">Email</label>
+            <input type="email" name="email" class="w-full p-3 rounded-lg border" required>
+          </div>
+          <div>
+            <label class="block font-medium mb-2">Message</label>
+            <textarea name="message" rows="5" class="w-full p-3 rounded-lg border" required></textarea>
+          </div>
+          <button type="submit" class="cta-gold w-full">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="flex flex-col justify-center space-y-6">
+        <div>
+          <h3 class="font-semibold text-lg mb-2">📍 Address</h3>
+          <p class="text-gray-700">123 Finance Street, Global City, World</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">📧 Email</h3>
+          <p class="text-gray-700">info@gwfma.org</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">📞 Phone</h3>
+          <p class="text-gray-700">+1 (555) 123-4567</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">🌍 Map</h3>
+          <iframe class="w-full h-64 rounded-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094375!2d144.95592831584465!3d-37.817209742021804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAyLjAiUyAxNDTCsDU3JzMwLjMiRQ!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 flex flex-col items-center text-center gap-6">
+      <p class="font-bold text-white text-lg">GWFMA</p>
+      <p class="text-sm">Empowering wealth education worldwide</p>
+      <div class="flex gap-6">
+        <a href="#"><img src="icons/facebook.svg" class="w-7 h-7"></a>
+        <a href="#"><img src="icons/instagram.svg" class="w-7 h-7"></a>
+        <a href="#"><img src="icons/tiktok.svg" class="w-7 h-7"></a>
+      </div>
+      <form class="w-full max-w-md flex">
+        <input type="email" placeholder="Your email" class="flex-grow p-3 rounded-l-lg border-none" required>
+        <button class="cta-gold rounded-r-lg">Subscribe</button>
+      </form>
+      <div class="text-sm">© GWFMA. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("hidden"));
+  </script>
+</body>
+</html>

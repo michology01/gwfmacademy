@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GWFMA - Global Wealth Financial Market Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+    .cta-red { background:#dc2626; color:white; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:700; transition:.2s; }
+    .cta-red:hover { background:#b91c1c; transform:translateY(-2px); }
+    .testimonial { transition: transform .3s ease; }
+    .testimonial:hover { transform: translateY(-6px); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+     
+        <div>
+          <div class="font-bold text-lg">GWFMA</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      <nav id="navLinks" class="hidden flex-col gap-4 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-4 md:bg-transparent md:w-auto">
+        <a href="index.html" class="cta-gold text-center">Home</a>
+        <a href="about.html" class="cta-gold text-center">About</a>
+        <a href="calculator.html" class="cta-gold text-center">Calculator</a>
+        <a href="media.html" class="cta-gold text-center">Media</a>
+        <a href="blog.html" class="cta-gold text-center">Blog</a>
+        <a href="contact.html" class="cta-gold text-center">Contact</a>
+        <a href="register.html" class="cta-gold text-center">Enroll</a>
+        <a href="careers.html" class="cta-gold text-center">Careers</a>
+        <a href="https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/LGV6MYMWVTHDGS2AXBK4EDWL" target="_blank" class="cta-red text-center">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative h-[500px] flex items-center justify-center text-center text-white" style="background:url('images/finance.jpg') center/cover;">
+    <div class="absolute inset-0 bg-black bg-opacity-100"></div>
+    <div class="relative z-10 px-6">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Empowering Financial Literacy</h1>
+      <p class="text-lg mb-6">Learn Forex, Wealth Management & Investing with GWFMA</p>
+      <a href="register.html" class="cta-gold">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Programs & Pricing -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Our Programs & Pricing</h2>
+
+      <!-- Country Selector -->
+      <div class="mb-8">
+        <label class="block font-semibold mb-2">Select Your Country</label>
+        <select id="countrySelector" class="p-3 rounded-lg border">
+          <option value="US">United States (USD)</option>
+          <option value="UK">United Kingdom (GBP)</option>
+          <option value="NG">Nigeria (NGN)</option>
+          <option value="IN">India (INR)</option>
+          <option value="EU">Europe (EUR)</option>
+        </select>
+      </div>
+
+      <!-- Programs -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-4">📘 Workbook</h3>
+          <p class="mb-4 text-gray-600">Practical workbook for learners.</p>
+          <div class="text-2xl font-bold mb-4" id="priceWorkbook">$5</div>
+          <a href="register.html" class="cta-gold inline-block">Enroll</a>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-4">📚 12-Week Forex Academy</h3>
+          <p class="mb-4 text-gray-600">Comprehensive live training for beginners & intermediates.</p>
+          <div class="text-2xl font-bold mb-4" id="priceAcademy">$500</div>
+          <a href="register.html" class="cta-gold inline-block">Enroll</a>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-bold mb-4">🏆 Lifetime Membership</h3>
+          <p class="mb-4 text-gray-600">Access all courses, updates & community support for life.</p>
+          <div class="text-2xl font-bold mb-4" id="priceLifetime">$1200</div>
+          <a href="register.html" class="cta-gold inline-block">Enroll</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">What Our Students Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="bg-gray-50 p-6 rounded-2xl shadow testimonial">
+          <p class="text-gray-700 italic mb-4">“The academy changed my life. I now trade confidently!”</p>
+          <h4 class="font-semibold">Sarah A.</h4>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-2xl shadow testimonial">
+          <p class="text-gray-700 italic mb-4">“Simple, practical, and effective training. Highly recommend.”</p>
+          <h4 class="font-semibold">Michael K.</h4>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-2xl shadow testimonial">
+          <p class="text-gray-700 italic mb-4">“The lifetime membership was worth every penny.”</p>
+          <h4 class="font-semibold">Aisha T.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Highlights -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">From Our Blog</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <h3 class="font-bold mb-2">Forex Tutor</h3>
+          <p class="text-gray-600 mb-4">Start learning the basics of forex trading today.</p>
+          <a href="forex-tutor.html" class="cta-gold inline-block">Read More</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <h3 class="font-bold mb-2">Trading Strategies</h3>
+          <p class="text-gray-600 mb-4">Discover strategies that professionals use to grow wealth.</p>
+          <a href="forex-strategies.html" class="cta-gold inline-block">Read More</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <h3 class="font-bold mb-2">Risk Management</h3>
+          <p class="text-gray-600 mb-4">Protect your capital and trade smarter with proper risk plans.</p>
+          <a href="risk-management.html" class="cta-gold inline-block">Read More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-6 flex flex-col items-center text-center gap-6">
+      <p class="font-bold text-white text-lg">GWFMA</p>
+      <p class="text-sm">Empowering wealth education worldwide</p>
+      <div class="flex gap-6">
+        <a href="#"><img src="icons/facebook.svg" class="w-7 h-7"></a>
+        <a href="#"><img src="icons/instagram.svg" class="w-7 h-7"></a>
+        <a href="#"><img src="icons/tiktok.svg" class="w-7 h-7"></a>
+      </div>
+      <form class="w-full max-w-md flex">
+        <input type="email" placeholder="Your email" class="flex-grow p-3 rounded-l-lg border-none" required>
+        <button class="cta-gold rounded-r-lg">Subscribe</button>
+      </form>
+      <div class="text-sm">© GWFMA. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("hidden"));
+
+    // Example dynamic pricing (simplified)
+    const prices = {
+      US: {workbook:"$5", academy:"$500", lifetime:"$1200"},
+      UK: {workbook:"£4", academy:"£400", lifetime:"£1000"},
+      NG: {workbook:"₦2000", academy:"₦200000", lifetime:"₦500000"},
+      IN: {workbook:"₹400", academy:"₹40000", lifetime:"₹100000"},
+      EU: {workbook:"€5", academy:"€450", lifetime:"€1100"}
+    };
+    const selector=document.getElementById("countrySelector");
+    selector.addEventListener("change",()=>{
+      const c=selector.value;
+      document.getElementById("priceWorkbook").innerText=prices[c].workbook;
+      document.getElementById("priceAcademy").innerText=prices[c].academy;
+      document.getElementById("priceLifetime").innerText=prices[c].lifetime;
+    });
+  </script>
+</body>
+</html>
