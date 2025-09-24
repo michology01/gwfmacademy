@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forex Tutor Program - GWFMA Nigeria</title>
+  <meta name="description" content="Learn more about the GWFMA Forex Tutor Program. Gain expert knowledge, mentorship, and real trading experience." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+    .faq { border-bottom:1px solid #ddd; padding:1rem 0; cursor:pointer; }
+    .faq h3 { font-weight:600; display:flex; justify-content:space-between; }
+    .faq p { display:none; margin-top:0.5rem; color:#444; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <img src="images/company-logo.jpg" alt="GWFMA Logo" class="h-12">
+        </a>
+        <div>
+          <div class="font-bold text-lg">GWFMA Nigeria</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <select id="lang" class="p-2 rounded bg-gray-800 text-white">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+        <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      </div>
+      <nav id="navLinks" class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-6 md:bg-transparent md:w-auto">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+        <a href="calculator.html" class="hover:text-yellow-400">Calculator</a>
+        <a href="media.html" class="hover:text-yellow-400">Media</a>
+        <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+        <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+        <a href="register.html" class="cta-gold text-center">Enroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-black text-white py-20 text-center">
+    <h1 id="readmore-title" class="text-4xl font-bold">Forex Tutor Program</h1>
+    <p id="readmore-subtitle" class="mt-4 text-gray-300">Gain expert mentorship and practical trading experience with GWFMA Nigeria.</p>
+  </section>
+
+  <!-- Program Details -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-2xl font-bold mb-6">Program Overview</h2>
+      <p class="mb-6 text-gray-700">
+        The Forex Tutor Program at GWFMA Nigeria is designed for learners who want hands-on guidance in mastering the art of Forex trading. 
+        Our experienced tutors provide step-by-step mentorship, personalized support, and live trading practice to ensure you gain both 
+        confidence and competence in the financial markets.
+      </p>
+
+      <h2 class="text-2xl font-bold mb-6">What You Will Learn</h2>
+      <ul class="list-disc pl-6 text-gray-700 mb-6">
+        <li>Fundamentals of Forex and financial markets</li>
+        <li>Technical and fundamental analysis</li>
+        <li>Risk management strategies</li>
+        <li>Trading psychology and discipline</li>
+        <li>Practical live trading sessions</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mb-6">Who is This For?</h2>
+      <p class="mb-6 text-gray-700">
+        This program is perfect for beginners who want to start their Forex journey, as well as intermediate traders 
+        looking to refine their strategies with the help of a professional mentor.
+      </p>
+
+      <!-- Program Pricing -->
+      <div class="bg-gray-100 p-6 rounded-xl shadow mt-10 text-center">
+        <h2 class="text-2xl font-bold mb-4">💵 Program Pricing</h2>
+        <p class="text-gray-700 mb-4">Enroll in the Forex Tutor Program for just:</p>
+        <p class="text-3xl font-extrabold text-green-600 mb-6">₦150,000</p>
+
+        <!-- Payment Buttons -->
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+          <a href="https://paystack.com/pay/your-link" target="_blank" class="cta-gold w-full md:w-auto text-center">💳 Pay with Paystack</a>
+          <a href="https://flutterwave.com/pay/your-link" target="_blank" class="cta-gold w-full md:w-auto text-center">🌍 Pay with Flutterwave</a>
+          <a href="https://paypal.me/yourusername/300" target="_blank" class="cta-gold w-full md:w-auto text-center">💲 Pay with PayPal</a>
+        </div>
+
+        <p class="mt-6 text-sm text-gray-600">⚠️ After payment, please complete your registration form on the <a href="register.html" class="underline text-blue-600">Enroll Page</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+      
+      <div class="faq">
+        <h3>How long is the Forex Tutor Program? <span>+</span></h3>
+        <p>The program typically runs for 12 weeks, with weekly mentorship sessions.</p>
+      </div>
+
+      <div class="faq">
+        <h3>Do I need prior experience? <span>+</span></h3>
+        <p>No prior experience is required. Our tutors will guide you from beginner level to advanced strategies.</p>
+      </div>
+
+      <div class="faq">
+        <h3>Is this program online or in-person? <span>+</span></h3>
+        <p>The Forex Tutor Program is offered both online and at selected training centers across Nigeria.</p>
+      </div>
+
+      <div class="faq">
+        <h3>Will I get a certificate after completion? <span>+</span></h3>
+        <p>Yes, participants will receive a certificate of completion from GWFMA Nigeria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="py-10 bg-gray-900 text-white text-center">
+    <p id="support-text" class="mb-4">Need Help? Contact us directly:</p>
+    <div class="flex justify-center gap-6">
+      <a href="mailto:support@gwfma.com" class="hover:text-yellow-400">📧 Email</a>
+      <a href="tel:+2348000000000" class="hover:text-yellow-400">📞 Call</a>
+      <a href="https://wa.me/2348000000000" target="_blank" class="hover:text-yellow-400">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 text-center">
+    <p id="footer-text" class="text-sm">© GWFMA Nigeria. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Menu
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("hidden"));
+
+    // FAQ toggle
+    document.querySelectorAll(".faq").forEach(faq=>{
+      faq.addEventListener("click",()=>{
+        const p=faq.querySelector("p");
+        const span=faq.querySelector("span");
+        p.style.display=p.style.display==="block"?"none":"block";
+        span.textContent=span.textContent==="+"?"-":"+";
+      });
+    });
+  </script>
+
+  <!-- Translator -->
+  <script>
+    const translations = {
+      en:{title:"Forex Tutor Program",sub:"Gain expert mentorship and practical trading experience with GWFMA Nigeria.",support:"Need Help? Contact us directly:",footer:"© GWFMA Nigeria. All rights reserved."},
+      yo:{title:"Eto Olukọni Forex",sub:"Gba ikẹkọ amọja ati iriri iṣowo gidi pẹlu GWFMA Naijiria.",support:"Nilo iranlọwọ? Kan si wa taara:",footer:"© GWFMA Naijiria. Gbogbo ẹtọ wa ni aabo."},
+      ig:{title:"Usoro Onye Nkuzi Forex",sub:"Nweta nduzi ọkachamara na ahụmịhe azụmahịa n’eziokwu na GWFMA Naịjirịa.",support:"Chọrọ enyemaka? Kpọtụrụ anyị ozugbo:",footer:"© GWFMA Naịjirịa. Ebe niile echekwara."},
+      ha:{title:"Shirin Malamin Forex",sub:"Sami jagoranci na ƙwararru da gogewa ta kasuwanci kai tsaye tare da GWFMA Najeriya.",support:"Kana buƙatar taimako? Tuntube mu kai tsaye:",footer:"© GWFMA Najeriya. Duk haƙƙoƙi an tanada."}
+    };
+
+    document.getElementById("lang").addEventListener("change", function(){
+      const lang=this.value; const t=translations[lang];
+      document.getElementById("readmore-title").innerText=t.title;
+      document.getElementById("readmore-subtitle").innerText=t.sub;
+      document.getElementById("support-text").innerText=t.support;
+      document.getElementById("footer-text").innerText=t.footer;
+    });
+  </script>
+</body>
+</html>

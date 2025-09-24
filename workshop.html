@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Upcoming Workshop - GWFMA Nigeria</title>
+  <meta name="description" content="Register for our upcoming Forex workshops and get reminders before the event." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+    .hidden { display:none; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <img src="images/company-logo.jpg" alt="GWFMA Logo" class="h-12">
+        </a>
+        <div>
+          <div class="font-bold text-lg">GWFMA Nigeria</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <select id="lang" class="p-2 rounded bg-gray-800 text-white">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+        <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      </div>
+      <nav id="navLinks" class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-6 md:bg-transparent md:w-auto">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+        <a href="calculator.html" class="hover:text-yellow-400">Calculator</a>
+        <a href="media.html" class="hover:text-yellow-400">Media</a>
+        <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+        <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+        <a href="register.html" class="hover:text-yellow-400">Enroll</a>
+        <a href="workshop.html" class="cta-gold text-center">Workshops</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Workshop Registration -->
+  <section class="py-20">
+    <div class="container mx-auto px-6 max-w-lg bg-gray-50 p-8 rounded-xl shadow">
+      <h1 id="workshop-title" class="text-2xl font-bold mb-6 text-center">Upcoming Workshop Registration</h1>
+
+      <form id="workshopForm" action="https://formspree.io/f/mdkwovnb" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 border rounded" />
+        <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 border rounded" />
+        <input type="tel" name="phone" placeholder="Phone Number (include +234...)" required class="w-full p-3 border rounded" />
+
+        <!-- Country (auto-detect) -->
+        <input type="text" id="country" name="country" readonly class="w-full p-3 border rounded bg-gray-100" />
+
+        <!-- Hidden Fields -->
+        <input type="hidden" name="event_title" value="Forex Workshop" />
+        <input type="hidden" name="event_time" value="10:00 AM" />
+
+        <!-- Workshop Date + City -->
+        <label class="block text-sm font-medium">Select Workshop Date:</label>
+        <select name="event_date_city" required class="w-full p-3 border rounded">
+          <option value="">Choose a date</option>
+          <option value="2025-10-01 - Lagos">Oct 1, 2025 – Lagos</option>
+          <option value="2025-10-15 - Abuja">Oct 15, 2025 – Abuja</option>
+        </select>
+
+        <!-- Reminder Preferences -->
+        <fieldset class="mt-4 border p-3 rounded">
+          <legend class="text-sm font-medium text-gray-700">Reminder Preferences</legend>
+          <label class="flex items-center space-x-2 mt-2">
+            <input type="checkbox" name="sms_reminder" value="Yes" class="h-4 w-4 text-yellow-500 border-gray-300 rounded">
+            <span class="text-sm text-gray-700">Yes, send me SMS reminders</span>
+          </label>
+          <label class="flex items-center space-x-2 mt-2">
+            <input type="checkbox" name="whatsapp_reminder" value="Yes" class="h-4 w-4 text-green-500 border-gray-300 rounded">
+            <span class="text-sm text-gray-700">Yes, send me WhatsApp reminders</span>
+          </label>
+        </fieldset>
+
+        <button type="submit" class="cta-gold w-full mt-4">Register for Workshop</button>
+      </form>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="hidden mt-6 text-center text-green-700 font-semibold">
+        ✅ Thank you! Your workshop registration has been received. We’ll remind you before the event.
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="py-10 bg-gray-900 text-white text-center">
+    <p id="support-text" class="mb-4">Need Help? Contact us directly:</p>
+    <div class="flex justify-center gap-6">
+      <a href="mailto:support@gwfma.com" class="hover:text-yellow-400">📧 Email</a>
+      <a href="tel:+2348000000000" class="hover:text-yellow-400">📞 Call</a>
+      <a href="https://wa.me/2348000000000" target="_blank" class="hover:text-yellow-400">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 text-center">
+    <p id="footer-text" class="text-sm">© GWFMA Nigeria. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const workshopForm = document.getElementById("workshopForm");
+    const successMessage = document.getElementById("successMessage");
+
+    workshopForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      fetch(workshopForm.action, {
+        method:"POST",
+        body:new FormData(workshopForm),
+        headers:{ 'Accept':'application/json' }
+      }).then(res=>{
+        if(res.ok){
+          successMessage.classList.remove("hidden");
+          workshopForm.reset();
+        } else {
+          alert("❌ Error submitting form. Try again.");
+        }
+      });
+    });
+
+    // Geo-IP auto-detect
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("country").value = data.country_name;
+      })
+      .catch(() => {
+        document.getElementById("country").value = "Nigeria (default)";
+      });
+
+    // Translator
+    const translations = {
+      en:{title:"Upcoming Workshop Registration",support:"Need Help? Contact us directly:",footer:"© GWFMA Nigeria. All rights reserved."},
+      yo:{title:"Forukọsilẹ fun Idanileko to n bọ",support:"Nilo iranlọwọ? Kan si wa taara:",footer:"© GWFMA Naijiria. Gbogbo ẹtọ wa ni aabo."},
+      ig:{title:"Debanye aha maka ọmụmụ ọmụmụ",support:"Chọrọ enyemaka? Kpọtụrụ anyị ozugbo:",footer:"© GWFMA Naịjirịa. Ebe niile echekwara."},
+      ha:{title:"Yi rajista don taron bita",support:"Kana buƙatar taimako? Tuntube mu kai tsaye:",footer:"© GWFMA Najeriya. Duk haƙƙoƙi an tanada."}
+    };
+
+    document.getElementById("lang").addEventListener("change", function(){
+      const lang=this.value; const t=translations[lang];
+      document.getElementById("workshop-title").innerText=t.title;
+      document.getElementById("support-text").innerText=t.support;
+      document.getElementById("footer-text").innerText=t.footer;
+    });
+
+    // Mobile menu
+    document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("hidden"));
+  </script>
+</body>
+</html>

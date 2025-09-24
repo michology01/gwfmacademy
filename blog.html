@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog - GWFMA Nigeria</title>
+  <meta name="description" content="Read the latest news, insights, and updates from GWFMA Nigeria Forex Academy." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <img src="images/company-logo.jpg" alt="GWFMA Logo" class="h-12">
+        </a>
+        <div>
+          <div class="font-bold text-lg">GWFMA Nigeria</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <select id="lang" class="p-2 rounded bg-gray-800 text-white">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+        <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      </div>
+      <nav id="navLinks" class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-6 md:bg-transparent md:w-auto">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+        <a href="calculator.html" class="hover:text-yellow-400">Calculator</a>
+        <a href="media.html" class="hover:text-yellow-400">Media</a>
+        <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+        <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+        <a href="register.html" class="cta-gold text-center">Enroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-black text-white py-20 text-center">
+    <h1 id="blog-title" class="text-4xl font-bold">Our Blog</h1>
+    <p id="blog-subtitle" class="mt-4 text-gray-300">Stay updated with Forex insights, academy news, and student success stories.</p>
+  </section>
+
+  <!-- Blog Cards -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Blog Post 1 -->
+        <div class="bg-gray-100 rounded-xl shadow p-6 flex flex-col">
+          <img src="images/blog1.jpg" alt="Blog 1" class="rounded-lg mb-4">
+          <h2 class="text-xl font-bold mb-2">The Rise of Forex Trading in Nigeria</h2>
+          <p class="text-gray-700 mb-4">Forex trading has become a major opportunity for young Nigerians seeking financial independence...</p>
+          <a href="#" class="cta-gold mt-auto text-center">Read More</a>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="bg-gray-100 rounded-xl shadow p-6 flex flex-col">
+          <img src="images/blog2.jpg" alt="Blog 2" class="rounded-lg mb-4">
+          <h2 class="text-xl font-bold mb-2">5 Tips for New Forex Traders</h2>
+          <p class="text-gray-700 mb-4">Starting your Forex journey can be challenging, but these 5 tips will help you trade smart and avoid mistakes...</p>
+          <a href="#" class="cta-gold mt-auto text-center">Read More</a>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="bg-gray-100 rounded-xl shadow p-6 flex flex-col">
+          <img src="images/blog3.jpg" alt="Blog 3" class="rounded-lg mb-4">
+          <h2 class="text-xl font-bold mb-2">Inside the GWFMA Academy</h2>
+          <p class="text-gray-700 mb-4">Take a behind-the-scenes look at our 12-week Forex Academy and how we train our students for success...</p>
+          <a href="#" class="cta-gold mt-auto text-center">Read More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="py-10 bg-gray-900 text-white text-center">
+    <p id="support-text" class="mb-4">Need Help? Contact us directly:</p>
+    <div class="flex justify-center gap-6">
+      <a href="mailto:support@gwfma.com" class="hover:text-yellow-400">📧 Email</a>
+      <a href="tel:+2348000000000" class="hover:text-yellow-400">📞 Call</a>
+      <a href="https://wa.me/2348000000000" target="_blank" class="hover:text-yellow-400">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 text-center">
+    <p id="footer-text" class="text-sm">© GWFMA Nigeria. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("hidden"));
+  </script>
+
+  <!-- Translator -->
+  <script>
+    const translations = {
+      en:{title:"Our Blog",sub:"Stay updated with Forex insights, academy news, and student success stories.",support:"Need Help? Contact us directly:",footer:"© GWFMA Nigeria. All rights reserved."},
+      yo:{title:"Bulọọgi Wa",sub:"Wa ni imudojuiwọn pẹlu oye Forex, awọn iroyin ile-ẹkọ giga, ati awọn itan aṣeyọri akẹkọ.",support:"Nilo iranlọwọ? Kan si wa taara:",footer:"© GWFMA Naijiria. Gbogbo ẹtọ wa ni aabo."},
+      ig:{title:"Blọgụ Anyị",sub:"Nọgide imelite na nghọta Forex, akụkọ ụlọ akwụkwọ, na akụkọ ihe ịga nke ọma ụmụakwụkwọ.",support:"Chọrọ enyemaka? Kpọtụrụ anyị ozugbo:",footer:"© GWFMA Naịjirịa. Ebe niile echekwara."},
+      ha:{title:"Bulog ɗinmu",sub:"Kasance da sabuntawa tare da hangen Forex, labaran makaranta, da labaran nasarar ɗalibai.",support:"Kana buƙatar taimako? Tuntube mu kai tsaye:",footer:"© GWFMA Najeriya. Duk haƙƙoƙi an tanada."}
+    };
+
+    document.getElementById("lang").addEventListener("change", function(){
+      const lang=this.value; const t=translations[lang];
+      document.getElementById("blog-title").innerText=t.title;
+      document.getElementById("blog-subtitle").innerText=t.sub;
+      document.getElementById("support-text").innerText=t.support;
+      document.getElementById("footer-text").innerText=t.footer;
+    });
+  </script>
+</body>
+</html>

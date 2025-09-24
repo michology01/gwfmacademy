@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forex Calculators - GWFMA Nigeria</title>
+  <meta name="description" content="Use our Forex calculators: Pip, Margin, Profit, and Position Size to plan your trading strategy effectively." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+    input { width:100%; padding:0.6rem; border:1px solid #ccc; border-radius:0.5rem; margin-top:0.3rem; }
+    label { font-weight:600; }
+    .tab { cursor:pointer; padding:0.8rem 1.2rem; border-bottom:3px solid transparent; }
+    .tab.active { border-color:#f5c04a; font-weight:700; color:#111827; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <img src="images/company-logo.jpg" alt="GWFMA Logo" class="h-12">
+        </a>
+        <div>
+          <div class="font-bold text-lg">GWFMA Nigeria</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <select id="lang" class="p-2 rounded bg-gray-800 text-white">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+        <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      </div>
+      <nav id="navLinks" class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-6 md:bg-transparent md:w-auto">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+        <a href="calculator.html" class="hover:text-yellow-400">Calculator</a>
+        <a href="media.html" class="hover:text-yellow-400">Media</a>
+        <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+        <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+        <a href="register.html" class="cta-gold text-center">Enroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-black text-white py-20 text-center">
+    <h1 id="calc-title" class="text-4xl font-bold">Forex Calculators</h1>
+    <p id="calc-subtitle" class="mt-4 text-gray-300">Use our Pip, Margin, Profit, and Position Size calculators to improve your trading decisions.</p>
+  </section>
+
+  <!-- Calculators -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <!-- Tabs -->
+      <div class="flex justify-center gap-6 mb-10">
+        <div class="tab active" data-tab="pip">📏 Pip</div>
+        <div class="tab" data-tab="margin">💰 Margin</div>
+        <div class="tab" data-tab="profit">📊 Profit</div>
+        <div class="tab" data-tab="position">📐 Position Size</div>
+      </div>
+
+      <!-- Tab Contents -->
+      <div id="pip" class="tab-content">
+        <h2 id="pip-title" class="text-2xl font-bold mb-4">Pip Calculator</h2>
+        <form class="space-y-4">
+          <div>
+            <label>Trade Size (Lots)</label>
+            <input type="number" id="pip-lots" placeholder="e.g., 1">
+          </div>
+          <div>
+            <label>Pip Value (USD)</label>
+            <input type="number" id="pip-value" placeholder="e.g., 10">
+          </div>
+          <button type="button" class="cta-gold w-full" onclick="calcPip()">Calculate</button>
+        </form>
+        <p id="pip-result" class="mt-4 font-bold"></p>
+      </div>
+
+      <div id="margin" class="tab-content hidden">
+        <h2 id="margin-title" class="text-2xl font-bold mb-4">Margin Calculator</h2>
+        <form class="space-y-4">
+          <div>
+            <label>Account Balance (USD)</label>
+            <input type="number" id="margin-balance" placeholder="e.g., 1000">
+          </div>
+          <div>
+            <label>Leverage</label>
+            <input type="number" id="margin-leverage" placeholder="e.g., 100">
+          </div>
+          <div>
+            <label>Trade Size (Lots)</label>
+            <input type="number" id="margin-lots" placeholder="e.g., 1">
+          </div>
+          <button type="button" class="cta-gold w-full" onclick="calcMargin()">Calculate</button>
+        </form>
+        <p id="margin-result" class="mt-4 font-bold"></p>
+      </div>
+
+      <div id="profit" class="tab-content hidden">
+        <h2 id="profit-title" class="text-2xl font-bold mb-4">Profit Calculator</h2>
+        <form class="space-y-4">
+          <div>
+            <label>Entry Price</label>
+            <input type="number" id="profit-entry" placeholder="e.g., 1.2000">
+          </div>
+          <div>
+            <label>Exit Price</label>
+            <input type="number" id="profit-exit" placeholder="e.g., 1.2100">
+          </div>
+          <div>
+            <label>Lots</label>
+            <input type="number" id="profit-lots" placeholder="e.g., 1">
+          </div>
+          <button type="button" class="cta-gold w-full" onclick="calcProfit()">Calculate</button>
+        </form>
+        <p id="profit-result" class="mt-4 font-bold"></p>
+      </div>
+
+      <div id="position" class="tab-content hidden">
+        <h2 id="position-title" class="text-2xl font-bold mb-4">Position Size Calculator</h2>
+        <form class="space-y-4">
+          <div>
+            <label>Account Balance (USD)</label>
+            <input type="number" id="pos-balance" placeholder="e.g., 1000">
+          </div>
+          <div>
+            <label>Risk %</label>
+            <input type="number" id="pos-risk" placeholder="e.g., 2">
+          </div>
+          <div>
+            <label>Stop Loss (Pips)</label>
+            <input type="number" id="pos-sl" placeholder="e.g., 50">
+          </div>
+          <button type="button" class="cta-gold w-full" onclick="calcPosition()">Calculate</button>
+        </form>
+        <p id="position-result" class="mt-4 font-bold"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="py-10 bg-gray-900 text-white text-center">
+    <p id="support-text" class="mb-4">Need Help? Contact us directly:</p>
+    <div class="flex justify-center gap-6">
+      <a href="mailto:support@gwfma.com" class="hover:text-yellow-400">📧 Email</a>
+      <a href="tel:+2348000000000" class="hover:text-yellow-400">📞 Call</a>
+      <a href="https://wa.me/2348000000000" target="_blank" class="hover:text-yellow-400">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 text-center">
+    <p id="footer-text" class="text-sm">© GWFMA Nigeria. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Menu
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("hidden"));
+
+    // Tabs
+    const tabs=document.querySelectorAll(".tab");
+    const contents=document.querySelectorAll(".tab-content");
+    tabs.forEach(tab=>{
+      tab.addEventListener("click",()=>{
+        tabs.forEach(t=>t.classList.remove("active"));
+        tab.classList.add("active");
+        contents.forEach(c=>c.classList.add("hidden"));
+        document.getElementById(tab.dataset.tab).classList.remove("hidden");
+      });
+    });
+
+    // Calculations
+    function calcPip(){
+      const lots=parseFloat(document.getElementById("pip-lots").value)||0;
+      const value=parseFloat(document.getElementById("pip-value").value)||0;
+      document.getElementById("pip-result").innerText=`Pip Value: $${(lots*value).toFixed(2)}`;
+    }
+    function calcMargin(){
+      const balance=parseFloat(document.getElementById("margin-balance").value)||0;
+      const leverage=parseFloat(document.getElementById("margin-leverage").value)||1;
+      const lots=parseFloat(document.getElementById("margin-lots").value)||0;
+      const required=(lots*100000)/leverage;
+      document.getElementById("margin-result").innerText=`Required Margin: $${required.toFixed(2)}`;
+    }
+    function calcProfit(){
+      const entry=parseFloat(document.getElementById("profit-entry").value)||0;
+      const exit=parseFloat(document.getElementById("profit-exit").value)||0;
+      const lots=parseFloat(document.getElementById("profit-lots").value)||0;
+      const profit=(exit-entry)*100000*lots;
+      document.getElementById("profit-result").innerText=`Profit/Loss: $${profit.toFixed(2)}`;
+    }
+    function calcPosition(){
+      const balance=parseFloat(document.getElementById("pos-balance").value)||0;
+      const risk=parseFloat(document.getElementById("pos-risk").value)||0;
+      const sl=parseFloat(document.getElementById("pos-sl").value)||0;
+      const riskAmount=balance*(risk/100);
+      const lotSize=riskAmount/(sl*10);
+      document.getElementById("position-result").innerText=`Position Size: ${lotSize.toFixed(2)} lots`;
+    }
+  </script>
+
+  <!-- Translator -->
+  <script>
+    const translations = {
+      en:{title:"Forex Calculators",sub:"Use our Pip, Margin, Profit, and Position Size calculators to improve your trading decisions.",pip:"Pip Calculator",margin:"Margin Calculator",profit:"Profit Calculator",position:"Position Size Calculator",support:"Need Help? Contact us directly:",footer:"© GWFMA Nigeria. All rights reserved."},
+      yo:{title:"Awọn Isiro Forex",sub:"Lo awọn isiro Pip, Margin, Èrè, ati Iwọn Ipo lati mu ipinnu iṣowo rẹ dara.",pip:"Isiro Pip",margin:"Isiro Margin",profit:"Isiro Èrè",position:"Isiro Iwọn Ipo",support:"Nilo iranlọwọ? Kan si wa taara:",footer:"© GWFMA Naijiria. Gbogbo ẹtọ wa ni aabo."},
+      ig:{title:"Ngwa Ngụkọta Forex",sub:"Jiri ngụkọta Pip, Margin, Uru, na Nha Ọnọdụ mee ka mkpebi azụmahịa gị ka mma.",pip:"Ngụkọta Pip",margin:"Ngụkọta Margin",profit:"Ngụkọta Uru",position:"Ngụkọta Nha Ọnọdụ",support:"Chọrọ enyemaka? Kpọtụrụ anyị ozugbo:",footer:"© GWFMA Naịjirịa. Ebe niile echekwara."},
+      ha:{title:"Kalkuletocin Forex",sub:"Yi amfani da Pip, Margin, Riba, da Girman Matsayi kalkuletoci don inganta shawarwarin kasuwanci.",pip:"Kalkuletan Pip",margin:"Kalkuletan Margin",profit:"Kalkuletan Riba",position:"Kalkuletan Girman Matsayi",support:"Kana buƙatar taimako? Tuntube mu kai tsaye:",footer:"© GWFMA Najeriya. Duk haƙƙoƙi an tanada."}
+    };
+
+    document.getElementById("lang").addEventListener("change", function(){
+      const lang=this.value; const t=translations[lang];
+      document.getElementById("calc-title").innerText=t.title;
+      document.getElementById("calc-subtitle").innerText=t.sub;
+      document.getElementById("pip-title").innerText=t.pip;
+      document.getElementById("margin-title").innerText=t.margin;
+      document.getElementById("profit-title").innerText=t.profit;
+      document.getElementById("position-title").innerText=t.position;
+      document.getElementById("support-text").innerText=t.support;
+      document.getElementById("footer-text").innerText=t.footer;
+    });
+  </script>
+</body>
+</html>

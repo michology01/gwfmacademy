@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GWFMA Nigeria - Forex Academy</title>
+  <meta name="description" content="Join GWFMA Nigeria Forex Academy. Learn Forex trading with our 12-week academy, lifetime membership, workbook, and workshops." />
+  <meta name="keywords" content="Forex, Nigeria Forex Academy, Forex Training, Forex Workbook, Forex Workshop, GWFMA" />
+  <meta property="og:title" content="GWFMA Nigeria - Forex Academy" />
+  <meta property="og:description" content="Empowering Nigerians with Forex education: Workbook, Workshops, 12-week academy, lifetime membership." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+    .testimonial { min-width:100%; transition: transform 0.5s ease-in-out; }
+    details summary { cursor:pointer; padding:0.5rem; font-weight:600; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <img src="images/company-logo.jpg" alt="GWFMA Logo" class="h-12">
+        </a>
+        <div>
+          <div class="font-bold text-lg">GWFMA Nigeria</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <select id="lang" class="p-2 rounded bg-gray-800 text-white">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+        <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      </div>
+      <nav id="navLinks" class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-6 md:bg-transparent md:w-auto">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+        <a href="calculator.html" class="hover:text-yellow-400">Calculator</a>
+        <a href="media.html" class="hover:text-yellow-400">Media</a>
+        <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+        <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+        <a href="register.html" class="cta-gold text-center">Enroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-black text-white py-20 text-center">
+    <h1 id="hero-title" class="text-4xl font-bold">Welcome to GWFMA Nigeria</h1>
+    <p id="hero-subtitle" class="mt-4 text-gray-300">Empowering Nigerians with Forex Education</p>
+    <div class="mt-6 flex justify-center gap-4">
+      <a href="register.html" class="cta-gold">Enroll Now</a>
+      <a href="#youtube" class="cta-gold bg-transparent border border-yellow-400 text-yellow-400">Watch Free Lesson</a>
+    </div>
+  </section>
+
+  <!-- Advertising Banner -->
+  <section class="bg-yellow-300 text-black text-center py-4 font-bold text-lg">
+    <span id="ad-banner">🎉 Special Offer: Get the Workbook for only ₦2,500 – Limited Time!</span>
+  </section>
+
+  <!-- Programs -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 id="programs-title" class="text-3xl font-bold mb-10">Our Programs</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 id="prog1-title" class="font-semibold text-lg">Workbook</h3>
+          <p id="prog1-desc" class="text-gray-600 mb-4">Practical guide for learners</p>
+          <p id="prog1-price" class="font-bold mb-4">₦2,500</p>
+          <a href="register.html" id="prog1-btn" class="cta-gold block">Buy Now</a>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 id="prog2-title" class="font-semibold text-lg">Workshop</h3>
+          <p id="prog2-desc" class="text-gray-600 mb-4">Hands-on training sessions</p>
+          <p id="prog2-price" class="font-bold mb-4">₦50,000</p>
+          <a href="register.html" id="prog2-btn" class="cta-gold block">Pre-Enroll</a>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 id="prog3-title" class="font-semibold text-lg">12-Week Forex Academy</h3>
+          <p id="prog3-desc" class="text-gray-600 mb-4">Structured professional training</p>
+          <p id="prog3-price" class="font-bold mb-4">₦150,000</p>
+          <a href="register.html" id="prog3-btn" class="cta-gold block">Pre-Enroll</a>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <h3 id="prog4-title" class="font-semibold text-lg">Lifetime Membership</h3>
+          <p id="prog4-desc" class="text-gray-600 mb-4">Unlimited access to all programs</p>
+          <p id="prog4-price" class="font-bold mb-4">₦500,000</p>
+          <a href="register.html" id="prog4-btn" class="cta-gold block">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 id="why-title" class="text-3xl font-bold mb-10">Why Choose Us</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="bg-gray-100 p-6 rounded shadow">✅ Experienced Tutors</div>
+        <div class="bg-gray-100 p-6 rounded shadow">✅ Affordable Pricing</div>
+        <div class="bg-gray-100 p-6 rounded shadow">✅ Global Community</div>
+        <div class="bg-gray-100 p-6 rounded shadow">✅ Lifetime Support</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counters -->
+  <section class="py-20 bg-gray-100 text-center">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div><h3 id="counter1" class="text-4xl font-bold">5,000+</h3><p>Students Trained</p></div>
+      <div><h3 id="counter2" class="text-4xl font-bold">20+</h3><p>Countries Reached</p></div>
+      <div><h3 id="counter3" class="text-4xl font-bold">90%</h3><p>Student Satisfaction</p></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-gradient-to-r from-yellow-50 to-yellow-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 id="testi-title" class="text-3xl font-bold mb-12">What Our Students Say</h2>
+
+      <div class="relative max-w-4xl mx-auto overflow-hidden">
+        <div id="testimonial-slider" class="flex transition-transform duration-700">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial min-w-full px-6">
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student 1" class="w-20 h-20 rounded-full mb-4 shadow-md">
+              <p id="testi1-text" class="italic text-lg text-gray-700">"The 12-week academy transformed my trading journey!"</p>
+              <div class="mt-4 flex justify-center text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
+              <p class="mt-4 font-semibold text-gray-900">– Chinedu, Lagos</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial min-w-full px-6">
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Student 2" class="w-20 h-20 rounded-full mb-4 shadow-md">
+              <p id="testi2-text" class="italic text-lg text-gray-700">"I started with the workbook and now I’m a full-time trader."</p>
+              <div class="mt-4 flex justify-center text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
+              <p class="mt-4 font-semibold text-gray-900">– Amaka, Abuja</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial min-w-full px-6">
+            <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center">
+              <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Student 3" class="w-20 h-20 rounded-full mb-4 shadow-md">
+              <p id="testi3-text" class="italic text-lg text-gray-700">"Lifetime membership gave me unlimited support and resources."</p>
+              <div class="mt-4 flex justify-center text-yellow-500 text-xl">⭐⭐⭐⭐⭐</div>
+              <p class="mt-4 font-semibold text-gray-900">– Ibrahim, Kano</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="flex justify-center mt-6 gap-3">
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workshops -->
+  <section class="py-20 bg-gray-100 text-center">
+    <h2 id="events-title" class="text-3xl font-bold mb-10">Upcoming Workshops</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="bg-white p-6 rounded shadow"><h3>Forex Basics Webinar</h3><p class="text-gray-600">March 15, Online</p><a href="workshop.html" class="cta-gold mt-4 block">Register</a></div>
+      <div class="bg-white p-6 rounded shadow"><h3>Advanced Trading Bootcamp</h3><p class="text-gray-600">April 5, Lagos</p><a href="workshop.html" class="cta-gold mt-4 block">Register</a></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="py-20 bg-white text-center">
+    <h2 id="blog-title" class="text-3xl font-bold mb-10">Latest from Our Blog</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="bg-gray-100 p-6 rounded shadow"><h3>Forex Strategies for 2025</h3><p class="text-gray-600">Learn key strategies to trade smarter this year.</p><a href="forex-strategies.html" class="cta-gold mt-4 block">Read</a></div>
+      <div class="bg-gray-100 p-6 rounded shadow"><h3>Risk Management Tips</h3><p class="text-gray-600">Protect your capital with these techniques.</p><a href="risk-management.html" class="cta-gold mt-4 block">Read</a></div>
+      <div class="bg-gray-100 p-6 rounded shadow"><h3>Forex Tutor Guide</h3><p class="text-gray-600">Start your learning journey here.</p><a href="forex-tutor.html" class="cta-gold mt-4 block">Read</a></div>
+    </div>
+  </section>
+
+  <!-- YouTube -->
+  <section id="youtube" class="py-20 bg-gray-100 text-center">
+    <h2 id="yt-title" class="text-3xl font-bold mb-6">Free YouTube Course</h2>
+    <p id="yt-subtitle" class="mb-6 text-gray-700">Start learning today with our free video lessons.</p>
+    <div class="max-w-3xl mx-auto">
+      <iframe class="w-full h-64 md:h-96 rounded-lg shadow" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Forex Course" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-white text-center">
+    <h2 id="faq-title" class="text-3xl font-bold mb-10">FAQs</h2>
+    <div class="max-w-2xl mx-auto text-left">
+      <details class="mb-4"><summary id="faq1">How do I enroll?</summary><p>Click the enroll button and fill the registration form.</p></details>
+      <details class="mb-4"><summary id="faq2">What payment options are available?</summary><p>We accept bank transfer, card, and online payment gateways.</p></details>
+      <details class="mb-4"><summary id="faq3">Do you offer refunds?</summary><p>No, our programs are non-refundable but you can defer.</p></details>
+    </div>
+  </section>
+
+  <!-- Read More -->
+  <section class="py-20 bg-gray-100 text-center">
+    <h2 id="readmore-title" class="text-2xl font-bold mb-6">Want to learn more?</h2>
+    <a href="forex-tutor.html" id="readmore-btn" class="cta-gold">Read More About Forex Tutor</a>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-yellow-400 text-black text-center py-12">
+    <h2 id="cta-title" class="text-3xl font-bold mb-4">Ready to transform your financial future?</h2>
+    <a href="register.html" class="cta-gold">Enroll Today</a>
+  </section>
+
+  <!-- Support -->
+  <section class="py-10 bg-gray-900 text-white text-center">
+    <p id="support-text" class="mb-4">Need Help? Contact us directly:</p>
+    <div class="flex justify-center gap-6">
+      <a href="mailto:support@gwfma.com" class="hover:text-yellow-400">📧 Email</a>
+      <a href="tel:+2348000000000" class="hover:text-yellow-400">📞 Call</a>
+      <a href="https://wa.me/2348000000000" target="_blank" class="hover:text-yellow-400">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 text-center">
+    <form class="max-w-md mx-auto flex mb-6">
+      <input type="email" placeholder="Your email" class="flex-grow p-3 rounded-l-lg border-none" required>
+      <button class="cta-gold rounded-r-lg">Subscribe</button>
+    </form>
+    <p id="footer-text" class="text-sm">© GWFMA Nigeria. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("hidden"));
+
+    const slider=document.getElementById("testimonial-slider");
+    const dots=document.querySelectorAll(".dot");
+    let index=0;
+    function showSlide(i){
+      index=i;
+      slider.style.transform=`translateX(-${index*100}%)`;
+      dots.forEach((dot,idx)=>dot.classList.toggle("bg-yellow-500", idx===index));
+    }
+    setInterval(()=>{index=(index+1)%3;showSlide(index);},5000);
+    dots.forEach((dot,idx)=>dot.addEventListener("click",()=>showSlide(idx)));
+    showSlide(0);
+  </script>
+
+  <!-- Translation -->
+  <script>
+    const translations = {
+      en:{hero:"Welcome to GWFMA Nigeria",sub:"Empowering Nigerians with Forex Education",ad:"🎉 Special Offer: Get the Workbook for only ₦2,500 – Limited Time!",programs:"Our Programs",workbook:"Workbook",workbookDesc:"Practical guide for learners",workshop:"Workshop",workshopDesc:"Hands-on training sessions",academy:"12-Week Forex Academy",academyDesc:"Structured professional training",lifetime:"Lifetime Membership",lifetimeDesc:"Unlimited access to all programs",why:"Why Choose Us",counters:["5,000+ Students Trained","20+ Countries Reached","90% Student Satisfaction"],testi:"What Our Students Say",testi1:"The 12-week academy transformed my trading journey!",testi2:"I started with the workbook and now I’m a full-time trader.",testi3:"Lifetime membership gave me unlimited support and resources.",events:"Upcoming Workshops",blog:"Latest from Our Blog",yt:"Free YouTube Course",ytSub:"Start learning today with our free video lessons.",faq:"FAQs",faq1:"How do I enroll?",faq2:"What payment options are available?",faq3:"Do you offer refunds?",read:"Want to learn more?",readBtn:"Read More About Forex Tutor",cta:"Ready to transform your financial future?",support:"Need Help? Contact us directly:",footer:"© GWFMA Nigeria. All rights reserved."},
+      yo:{hero:"Kaabọ si GWFMA Naijiria",sub:"Mu ẹkọ Forex wa si gbogbo ara ilu Naijiria",ad:"🎉 Ipese pataki: Gba Iwe iṣẹ fun ₦2,500 nikan – Fun akoko to lopin!",programs:"Awọn Eto Wa",workbook:"Iwe iṣẹ",workbookDesc:"Itọsọna fun awọn akẹkọ",workshop:"Idanileko",workshopDesc:"Ikẹkọ ọwọ-ọn",academy:"Ile-ẹkọ Forex ọsẹ mejila",academyDesc:"Ikẹkọ amọdaju ti a ṣeto",lifetime:"Ẹgbẹ ọmọ ẹgbẹ igbesi aye",lifetimeDesc:"Iraye ailopin si gbogbo eto",why:"Idi ti o fi yan wa",counters:["5,000+ Awọn akẹkọ","20+ Awọn orilẹ-ede","90% Itẹlọrun Akẹkọ"],testi:"Ohun ti Awọn akẹkọ Wa sọ",testi1:"Ile-ẹkọ ọsẹ mejila yi pada irin-ajo iṣowo mi!",testi2:"Mo bẹrẹ pẹlu iwe iṣẹ ati bayi Mo jẹ oniṣowo kikun.",testi3:"Ẹgbẹ ọmọ ẹgbẹ igbesi aye fun mi ni atilẹyin ailopin ati awọn orisun.",events:"Awọn idanileko to n bọ",blog:"Awọn ifiweranṣẹ tuntun lati Blog Wa",yt:"Ikẹkọ YouTube Ọfẹ",ytSub:"Bẹrẹ kọ ẹkọ loni pẹlu awọn ẹkọ fidio wa.",faq:"Awọn ibeere nigbagbogbo",faq1:"Bawo ni MO ṣe le forukọsilẹ?",faq2:"Awọn ọna isanwo wo ni o wa?",faq3:"Njẹ o nfun agbapada?",read:"Ṣe o fẹ kọ ẹkọ diẹ sii?",readBtn:"Ka diẹ sii nipa Forex Tutor",cta:"Ṣetan lati yi ọjọ iwaju ọrọ rẹ pada?",support:"Nilo iranlọwọ? Kan si wa taara:",footer:"© GWFMA Naijiria. Gbogbo ẹtọ wa ni aabo."},
+      ig:{hero:"Nnọọ na GWFMA Naịjirịa",sub:"Ịkwalite agụmakwụkwọ Forex na Naịjirịa",ad:"🎉 Onyinye pụrụ iche: Nweta akwụkwọ ọrụ maka ₦2,500 – Maka oge pere mpe!",programs:"Ụlọ ọrụ anyị",workbook:"Akwụkwọ ọrụ",workbookDesc:"Ntuziaka bara uru maka ụmụakwụkwọ",workshop:"Ụlọ ọrụ",workshopDesc:"Ụzụ aka",academy:"Ụlọ akwụkwọ Forex izu 12",academyDesc:"Ọzụzụ ọkachamara zuru oke",lifetime:"Mmemme ndụ dum",lifetimeDesc:"Nweta ohere enweghị oke na usoro niile",why:"Gịnị kpatara ịhọrọ anyị",counters:["5,000+ Ụmụakwụkwọ zụrụ","20+ Ụfọdụ mba","90% Ọṅụ ụmụakwụkwọ"],testi:"Ihe ụmụakwụkwọ anyị kwuru",testi1:"Ụlọ akwụkwọ izu 12 gbanwere njem azụmahịa m!",testi2:"Malitere site na akwụkwọ ọrụ ugbu a abụ m onye ahịa zuru oke.",testi3:"Mmemme ndụ dum nyere m nkwado na akụ na ụba enweghị oke.",events:"Ụlọ ọrụ na-abịa",blog:"Ozi ọhụrụ si Blog anyị",yt:"Ụmụmụm YouTube n’efu",ytSub:"Bido ịmụ taa site na vidiyo anyị.",faq:"Ajụjụ a na-ajụkarị",faq1:"Kedu ka m ga-esi debanye aha?",faq2:"Kedu ụzọ ịkwụ ụgwọ dị?",faq3:"Ị na-enye ụgwọ azụ?",read:"Chọrọ ịmụtakwu?",readBtn:"Gụọkwuo gbasara Forex Tutor",cta:"Ị kwadebere ime mgbanwe na ọdịnihu akụ gị?",support:"Chọrọ enyemaka? Kpọtụrụ anyị ozugbo:",footer:"© GWFMA Naịjirịa. Ebe niile echekwara."},
+      ha:{hero:"Barka da zuwa GWFMA Najeriya",sub:"Ƙarfafa ilimin Forex a Najeriya",ad:"🎉 Kyauta ta Musamman: Samu littafin aiki da ₦2,500 kawai – Na ɗan lokaci!",programs:"Shirye-shiryenmu",workbook:"Littafin aiki",workbookDesc:"Jagora mai amfani ga ɗalibai",workshop:"Taron bita",workshopDesc:"Horon aiki",academy:"Makarantar Forex na makonni 12",academyDesc:"Horon ƙwararru mai tsari",lifetime:"Membobinsu na Har Abada",lifetimeDesc:"Samun damar mara iyaka ga duk shirye-shiryenmu",why:"Dalilin Zabenmu",counters:["Dalibai 5,000+","Ƙasashe 20+","90% Gamsuwa"],testi:"Abin da dalibanmu suka ce",testi1:"Makarantar makonni 12 ta sauya tafiyar kasuwancina!",testi2:"Na fara da littafin aiki yanzu na zama cikakken ɗan kasuwa.",testi3:"Membobinsu na har abada sun bani tallafi da albarkatu marasa iyaka.",events:"Taron da ke zuwa",blog:"Sabbin labarai daga Blog ɗinmu",yt:"Darasin YouTube kyauta",ytSub:"Fara koyon yau tare da darussan bidiyo.",faq:"Tambayoyi akai-akai",faq1:"Ta yaya zan yi rajista?",faq2:"Wane hanyoyin biyan kudi ake da su?",faq3:"Shin kuna bayar da mayar da kudi?",read:"Kana so ka koyi ƙarin?",readBtn:"Kara Karantawa game da Forex Tutor",cta:"Shirye kake don canza makomar kuɗinka?",support:"Kana buƙatar taimako? Tuntube mu kai tsaye:",footer:"© GWFMA Najeriya. Duk haƙƙoƙi an tanada."}
+    };
+
+    document.getElementById("lang").addEventListener("change", function(){
+      const lang=this.value; const t=translations[lang];
+      document.getElementById("hero-title").innerText=t.hero;
+      document.getElementById("hero-subtitle").innerText=t.sub;
+      document.getElementById("ad-banner").innerText=t.ad;
+      document.getElementById("programs-title").innerText=t.programs;
+      document.getElementById("prog1-title").innerText=t.workbook;
+      document.getElementById("prog1-desc").innerText=t.workbookDesc;
+      document.getElementById("prog2-title").innerText=t.workshop;
+      document.getElementById("prog2-desc").innerText=t.workshopDesc;
+      document.getElementById("prog3-title").innerText=t.academy;
+      document.getElementById("prog3-desc").innerText=t.academyDesc;
+      document.getElementById("prog4-title").innerText=t.lifetime;
+      document.getElementById("prog4-desc").innerText=t.lifetimeDesc;
+      document.getElementById("why-title").innerText=t.why;
+      document.getElementById("counter1").innerText=t.counters[0];
+      document.getElementById("counter2").innerText=t.counters[1];
+      document.getElementById("counter3").innerText=t.counters[2];
+      document.getElementById("testi-title").innerText=t.testi;
+      document.getElementById("testi1-text").innerText=`"${t.testi1}"`;
+      document.getElementById("testi2-text").innerText=`"${t.testi2}"`;
+      document.getElementById("testi3-text").innerText=`"${t.testi3}"`;
+      document.getElementById("events-title").innerText=t.events;
+      document.getElementById("blog-title").innerText=t.blog;
+      document.getElementById("yt-title").innerText=t.yt;
+      document.getElementById("yt-subtitle").innerText=t.ytSub;
+      document.getElementById("faq-title").innerText=t.faq;
+      document.getElementById("faq1").innerText=t.faq1;
+      document.getElementById("faq2").innerText=t.faq2;
+      document.getElementById("faq3").innerText=t.faq3;
+      document.getElementById("readmore-title").innerText=t.read;
+      document.getElementById("readmore-btn").innerText=t.readBtn;
+      document.getElementById("cta-title").innerText=t.cta;
+      document.getElementById("support-text").innerText=t.support;
+      document.getElementById("footer-text").innerText=t.footer;
+    });
+  </script>
+</body>
+</html>

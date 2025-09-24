@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Careers - GWFMA Nigeria</title>
+  <meta name="description" content="Join the GWFMA Nigeria team. Explore Forex tutor, marketing, and student support job opportunities." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    .cta-gold { background:#f5c04a; color:#111827; padding:0.6rem 1.2rem; border-radius:0.6rem; font-weight:600; transition:.2s; }
+    .cta-gold:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(245,192,74,0.25); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Header -->
+  <header class="bg-black shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between text-white">
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <img src="images/company-logo.jpg" alt="GWFMA Logo" class="h-12">
+        </a>
+        <div>
+          <div class="font-bold text-lg">GWFMA Nigeria</div>
+          <div class="text-xs text-gray-300">Global Wealth Financial Market Academy</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <select id="lang" class="p-2 rounded bg-gray-800 text-white">
+          <option value="en">English</option>
+          <option value="yo">Yoruba</option>
+          <option value="ig">Igbo</option>
+          <option value="ha">Hausa</option>
+        </select>
+        <button id="menuBtn" class="md:hidden p-2 rounded bg-gray-800">☰</button>
+      </div>
+      <nav id="navLinks" class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-black md:static md:flex md:flex-row md:gap-6 md:bg-transparent md:w-auto">
+        <a href="index.html" class="hover:text-yellow-400">Home</a>
+        <a href="about.html" class="hover:text-yellow-400">About</a>
+        <a href="calculator.html" class="hover:text-yellow-400">Calculator</a>
+        <a href="media.html" class="hover:text-yellow-400">Media</a>
+        <a href="blog.html" class="hover:text-yellow-400">Blog</a>
+        <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+        <a href="careers.html" class="hover:text-yellow-400">Careers</a>
+        <a href="register.html" class="cta-gold text-center">Enroll</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-black text-white py-20 text-center">
+    <h1 id="careers-title" class="text-4xl font-bold">Careers at GWFMA</h1>
+    <p id="careers-subtitle" class="mt-4 text-gray-300">Join our mission to empower Nigerians through financial education.</p>
+  </section>
+
+  <!-- Job Listings -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+      
+      <!-- Forex Tutor -->
+      <div class="bg-gray-100 rounded-xl shadow p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-2">👨‍🏫 Forex Tutor</h2>
+        <p class="text-gray-700 mb-4">Teach and mentor students in Forex trading strategies, risk management, and technical analysis.</p>
+        <a href="page-careers.html" class="cta-gold mt-auto text-center">Apply Now</a>
+      </div>
+
+      <!-- Marketing Officer -->
+      <div class="bg-gray-100 rounded-xl shadow p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-2">📢 Marketing Officer</h2>
+        <p class="text-gray-700 mb-4">Develop campaigns to promote GWFMA’s programs, manage social media, and drive student enrollment.</p>
+        <a href="page-careers.html" class="cta-gold mt-auto text-center">Apply Now</a>
+      </div>
+
+      <!-- Student Support -->
+      <div class="bg-gray-100 rounded-xl shadow p-6 flex flex-col">
+        <h2 class="text-xl font-bold mb-2">🎓 Student Support Assistant</h2>
+        <p class="text-gray-700 mb-4">Provide assistance to students during their learning journey and handle general inquiries.</p>
+        <a href="page-careers.html" class="cta-gold mt-auto text-center">Apply Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="py-10 bg-gray-900 text-white text-center">
+    <p id="support-text" class="mb-4">Need Help? Contact us directly:</p>
+    <div class="flex justify-center gap-6">
+      <a href="mailto:support@gwfma.com" class="hover:text-yellow-400">📧 Email</a>
+      <a href="tel:+2348000000000" class="hover:text-yellow-400">📞 Call</a>
+      <a href="https://wa.me/2348000000000" target="_blank" class="hover:text-yellow-400">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 text-center">
+    <p id="footer-text" class="text-sm">© GWFMA Nigeria. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const menuBtn=document.getElementById("menuBtn");
+    const navLinks=document.getElementById("navLinks");
+    menuBtn.addEventListener("click",()=>navLinks.classList.toggle("hidden"));
+  </script>
+
+  <!-- Translator -->
+  <script>
+    const translations = {
+      en:{title:"Careers at GWFMA",sub:"Join our mission to empower Nigerians through financial education.",support:"Need Help? Contact us directly:",footer:"© GWFMA Nigeria. All rights reserved."},
+      yo:{title:"Awọn iṣẹ ni GWFMA",sub:"Darapọ mọ iṣẹ-ṣiṣe wa lati fun awọn ara ilu Naijiria ni agbara nipasẹ ẹkọ inawo.",support:"Nilo iranlọwọ? Kan si wa taara:",footer:"© GWFMA Naijiria. Gbogbo ẹtọ wa ni aabo."},
+      ig:{title:"Ọrụ na GWFMA",sub:"Jikọọ na ọrụ anyị iji nye ndị Naịjirịa ikike site n’ịmụ akụ na ụba.",support:"Chọrọ enyemaka? Kpọtụrụ anyị ozugbo:",footer:"© GWFMA Naịjirịa. Ebe niile echekwara."},
+      ha:{title:"Ayyuka a GWFMA",sub:"Shiga cikin aikinmu don ƙarfafa ’yan Najeriya ta hanyar ilimin kuɗi.",support:"Kana buƙatar taimako? Tuntube mu kai tsaye:",footer:"© GWFMA Najeriya. Duk haƙƙoƙi an tanada."}
+    };
+
+    document.getElementById("lang").addEventListener("change", function(){
+      const lang=this.value; const t=translations[lang];
+      document.getElementById("careers-title").innerText=t.title;
+      document.getElementById("careers-subtitle").innerText=t.sub;
+      document.getElementById("support-text").innerText=t.support;
+      document.getElementById("footer-text").innerText=t.footer;
+    });
+  </script>
+</body>
+</html>
