@@ -65,10 +65,10 @@
         <!-- Program Selection -->
         <select id="program" name="program" required class="w-full p-3 border rounded">
           <option value="">Select Program</option>
-          <option value="workbook">Workbook – ₦5,000 / $5</option>
-          <option value="workshop">Workshop – ₦50,000 / $15</option>
-          <option value="academy">12-Week Forex Academy – ₦150,000 / $60</option>
-          <option value="lifetime">Lifetime Membership – ₦500,000 / $100</option>
+          <option value="workbook">Workbook – $5</option>
+          <option value="workshop">Workshop –  $10</option>
+          <option value="academy">12-Week Forex Academy –  $50</option>
+          <option value="lifetime">Lifetime Membership –  $100</option>
         </select>
 
         <!-- Display Price -->
@@ -103,10 +103,10 @@
   <script>
     // Program Prices (Square only)
     const programPrices = {
-      workbook: { usd:"$5", ngn:"₦5,000", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/SCMFUKO33JO3YMUNTETJCJJR" },
-      workshop: { usd:"$15", ngn:"₦50,000", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/JKLBSK2GAU7MJ64FW52OETJK" },
-      academy:  { usd:"$60", ngn:"₦150,000", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/F3AVYCR5RFWNU4PKH2Z555JW" },
-      lifetime: { usd:"$100", ngn:"₦500,000", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/KLOUXZ2PKCOCDDF7XBF7MGF3" }
+      workbook: { usd:"$5", ngn:"", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/SCMFUKO33JO3YMUNTETJCJJR" },
+      workshop: { usd:"$10", ngn:"", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/JKLBSK2GAU7MJ64FW52OETJK" },
+      academy:  { usd:"$60", ngn:"", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/F3AVYCR5RFWNU4PKH2Z555JW" },
+      lifetime: { usd:"$100", ngn:"", square:"https://checkout.square.site/merchant/ML0VXN447PMM5/checkout/KLOUXZ2PKCOCDDF7XBF7MGF3" }
     };
 
     let userInNigeria = true;
